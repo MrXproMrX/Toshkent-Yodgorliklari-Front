@@ -91,7 +91,7 @@
                <div class="arxiologik__all">
                   <h2 class="toshkent_maps__title__h2">{{ $t('items') }}</h2>
                   <nuxt-link :to="localePath('/ashyolar')" class="arxiologik__all__link">
-                     {{ $t('ashyolar') }}
+                     {{ $t('everything') }}
                      <span><i class="fas fa-chevron-right"></i></span>
                   </nuxt-link>
                </div>
@@ -146,7 +146,7 @@
                <div class="arxiologik__all">
                   <h2 class="toshkent_maps__title__h2">{{ $t('scientists') }}</h2>
                   <nuxt-link :to="localePath('/scientists')" class="arxiologik__all__link">
-                     {{ $t('ashyolar') }}
+                     {{ $t('everything') }}
                      <span><i class="fas fa-chevron-right"></i></span>
                   </nuxt-link>
                </div>
@@ -169,7 +169,7 @@
                <div class="arxiologik__all">
                   <h2 class="toshkent_maps__title__h2">{{ $t('news') }}</h2>
                   <nuxt-link :to="localePath('/news')" class="arxiologik__all__link">
-                     {{ $t('ashyolar') }}
+                     {{ $t('everything') }}
                      <span><i class="fas fa-chevron-right"></i></span>
                   </nuxt-link>
                </div>

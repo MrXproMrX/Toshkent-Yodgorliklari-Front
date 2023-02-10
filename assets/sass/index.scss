@@ -464,6 +464,7 @@ body{
             display: flex !important;
             grid-gap: 20px;
             align-items:center;
+            flex-wrap: wrap;
 
             margin-top: 40px;
 
@@ -854,6 +855,7 @@ body{
            display: flex !important;
            grid-gap: 20px;
            align-items:center;
+           flex-wrap: wrap;
 
            margin-top: 40px;
 
@@ -1555,6 +1557,11 @@ body{
     }
 
    .header__list {
+      grid-gap: 15px;
+   }
+
+   .arxiologik__list .slick-dots,
+   .olimlar__list .slick-dots{
       grid-gap: 15px;
    }
 }
