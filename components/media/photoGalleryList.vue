@@ -2,7 +2,7 @@
    <div class="fotoGallery__list">
       <section class="media__cart__item" v-for="items in photoGallery" :key="items.id">
          <div class="fotoGallery__item">
-            <nuxt-link :to="`/media/photo/` + items.id">
+            <nuxt-link :to="localePath(`/media/photo/` + items.id)">
                <img :src="items.imgs" :alt="items.title">
                <span>
                   <i class="fas fa-search"></i>

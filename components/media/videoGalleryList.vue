@@ -1,7 +1,7 @@
 <template>
    <div class="fotoGallery__list">
       <div class="media__item__video" v-for="items in videoList" :key="items.id">
-         <nuxt-link :to="'/media/video/' + items.id">
+         <nuxt-link :to="localePath('/media/video/' + items.id)">
             <div class="media__img__video">
                <img :src="items.imgs" :alt="items.title">
 

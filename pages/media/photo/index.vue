@@ -20,11 +20,11 @@
             <div class="media__cart">
                <ul class="media__menu">
                   <li class="active">
-                     <nuxt-link :to="localePath('/media/photo')" class="media__menu__link">Foto</nuxt-link>
+                     <nuxt-link :to="localePath('/media/photo')" class="media__menu__link">{{ $t('foto') }}</nuxt-link>
                   </li>
 
                   <li>
-                     <nuxt-link :to="localePath('/media/video')" class="media__menu__link">Video</nuxt-link>
+                     <nuxt-link :to="localePath('/media/video')" class="media__menu__link">{{ $t('video') }}</nuxt-link>
                   </li>
                </ul>
 

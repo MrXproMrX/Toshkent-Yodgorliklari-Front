@@ -3,7 +3,7 @@
       <div class="yangiliklar__list">
 
          <div class="yangiliklar__item" v-for="items in newsItem" :key="items.id">
-            <nuxt-link :to="`/news/` + items.id">
+            <nuxt-link :to="localePath(`/news/` + items.id)">
                <div class="yangiliklar__img">
                   <img :src="items.imgs" :alt="items.title">
                </div>
