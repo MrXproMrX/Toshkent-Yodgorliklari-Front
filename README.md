@@ -1,9 +1,5 @@
 # toshkent-yodgorlik
 
-https://toshkent-yodgorliklari-front.web.app/
-
-![image](https://user-images.githubusercontent.com/91363364/218073837-aa01ffa9-44b8-4a21-9c90-a32e99d68336.png)
-
 ## Build Setup
 
 ```bash

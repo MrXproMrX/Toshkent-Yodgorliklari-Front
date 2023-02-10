@@ -8,14 +8,14 @@
 
             <div class="slider__item">
                <div class="slider__item__img">
-                  <img src="../assets/foto/slick_1.png" alt="slider">
+                  <img src="@/assets/foto/slick_1.png" alt="slider">
                </div>
                <section class="container">
                   <div class="slider__cart">
                      <h1 class="slider__title__h1">Kukaldosh madrasasi</h1>
                      <div class="slider__text">Lorem ipsum dolor sit amet</div>
                      <a href="#!" class="slider__link">
-                        Подробнее
+                        {{ $t('more') }}
                         <span><i class="fas fa-chevron-right"></i></span>
                      </a>
                   </div>
@@ -24,14 +24,14 @@
 
             <div class="slider__item">
                <div class="slider__item__img">
-                  <img src="../assets/foto/slick_1.png" alt="slider">
+                  <img src="@/assets/foto/slick_2.png" alt="slider">
                </div>
                <section class="container">
                   <div class="slider__cart">
                      <h1 class="slider__title__h1">Lorem ipsum dolor</h1>
                      <div class="slider__text">Lorem ipsum dolor sit amet sit amet</div>
                      <a href="#!" class="slider__link">
-                        Подробнее
+                        {{ $t('more') }}
                         <span><i class="fas fa-chevron-right"></i></span>
                      </a>
                   </div>
