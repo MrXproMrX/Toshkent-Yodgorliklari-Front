@@ -1,80 +1,79 @@
 <template>
-   <section>
-      <div class="videoGallery__list">
+  <section>
+    <div class="videoGallery__list">
+      <div v-if="itemVideo.id" class="videoGallery__list__item" @click="videoPlay = true">
+        <section class="videoGallery__img__item" :class="{active__video:videoPlay}">
+          <img class="videoItem" :src="itemVideo.imgs" alt="video">
+          <!-- play start -->
 
-         <div class="videoGallery__list__item" v-if="itemVideo.id" @click="videoPlay = true">
+          <div v-html="itemVideo.link" />
 
-            <section class="videoGallery__img__item" :class="{active__video:videoPlay}">
-               <img class="videoItem" :src="itemVideo.imgs" alt="video"/>
-               <!-- play start -->
+          <div class="button__min is-play" href="#">
+            <div class="button-outer-circle has-scale-animation" />
+            <div class="button-outer-circle has-scale-animation has-delay-short" />
+            <div class="button-icon is-play">
+              <img class="about_contint_in__video__img__play" alt="All" src="@/assets/foto/pley.svg">
+            </div>
+          </div>
 
-               <div v-html="itemVideo.link"></div>
+          <!-- play end -->
+        </section>
 
-               <div class="button__min is-play" href="#">
-                  <div class="button-outer-circle has-scale-animation"></div>
-                  <div class="button-outer-circle has-scale-animation has-delay-short"></div>
-                  <div class="button-icon is-play">
-                     <img class="about_contint_in__video__img__play" alt="All" src="@/assets/foto/pley.svg">
-                  </div>
-               </div>
+        <section class="videoGallery__item__cart">
+          <h3 class="videoGallery__list__title">
+            {{ itemVideo.title }}
+          </h3>
+        </section>
+      </div>
 
-               <!-- play end -->
-            </section>
+      <div class="videoGallery__menu__video">
+        <div v-for="(items,i) in viteoList" :key="items.id" class="videoGallery__item__video active" @click="videoClick(i)">
+          <div class="videoGallery__img__video">
+            <img class="videoImg" :src="items.imgs" alt="videoGallery">
 
-            <section class="videoGallery__item__cart">
-               <h3 class="videoGallery__list__title">
-                  {{ itemVideo.title }}
-               </h3>
-            </section>
+            <!-- play start -->
 
-         </div>
-
-         <div class="videoGallery__menu__video">
-
-            <div class="videoGallery__item__video active" v-for="(items,i) in viteoList" :key="items.id" @click="videoClick(i)">
-               <div class="videoGallery__img__video">
-                  <img class="videoImg" :src="items.imgs" alt="videoGallery">
-
-                  <!-- play start -->
-
-                  <div class="button__min is-play">
-                     <div class="button-outer-circle has-scale-animation"></div>
-                     <div class="button-outer-circle has-scale-animation has-delay-short"></div>
-                     <div class="button-icon is-play">
-                        <img class="about_contint_in__video__img__play" alt="All" src="@/assets/foto/pley.svg">
-                     </div>
-                  </div>
-
-                  <!-- play end -->
-
-               </div>
-
-               <h3 class="videoGallery__title__h3">
-                  {{ items.title }}
-               </h3>
+            <div class="button__min is-play">
+              <div class="button-outer-circle has-scale-animation" />
+              <div class="button-outer-circle has-scale-animation has-delay-short" />
+              <div class="button-icon is-play">
+                <img class="about_contint_in__video__img__play" alt="All" src="@/assets/foto/pley.svg">
+              </div>
             </div>
 
-         </div>
+            <!-- play end -->
+          </div>
+
+          <h3 class="videoGallery__title__h3">
+            {{ items.title }}
+          </h3>
+        </div>
       </div>
-   </section>
+    </div>
+  </section>
 </template>
 
 <script>
 export default {
-   props:['viteoList'],
+  props: {
+    viteoList: {
+      type: Array,
+      default: () => []
+    }
+  },
 
-   data(){
-      return{
-         itemVideo:this.viteoList[0],
-         videoPlay:false
-      }
-   },
+  data () {
+    return {
+      itemVideo: this.viteoList[0],
+      videoPlay: false
+    }
+  },
 
-   methods:{
-      videoClick(id){
-         this.itemVideo = this.viteoList[id]
-         this.videoPlay = false
-      }
-   }
+  methods: {
+    videoClick (id) {
+      this.itemVideo = this.viteoList[id]
+      this.videoPlay = false
+    }
+  }
 }
 </script>

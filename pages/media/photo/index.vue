@@ -1,62 +1,54 @@
 <template>
-   <section>
-      <!-- Memoriy start -->
+  <section>
+    <!-- Memoriy start -->
 
-      <div class="memoriy">
-         <section class="container">
-            <div class="memoriy__cart">
-               <h2 class="memoriy__title__h2">{{ $t('media') }}</h2>
-            </div>
-         </section>
-      </div>
+    <MemoriyItem :title="$t('media')"></MemoriyItem>
 
-      <!-- Memoriy end -->
+    <!-- Memoriy end -->
 
+    <!-- media start -->
 
-      <!-- media start -->
+    <div class="media">
+      <section class="container">
+        <div class="media__cart">
+          <ul class="media__menu">
+            <li class="active">
+              <nuxt-link :to="localePath('/media/photo')" class="media__menu__link">
+                {{ $t('foto') }}
+              </nuxt-link>
+            </li>
 
-      <div class="media">
-         <section class="container">
-            <div class="media__cart">
-               <ul class="media__menu">
-                  <li class="active">
-                     <nuxt-link :to="localePath('/media/photo')" class="media__menu__link">{{ $t('foto') }}</nuxt-link>
-                  </li>
+            <li>
+              <nuxt-link :to="localePath('/media/video')" class="media__menu__link">
+                {{ $t('video') }}
+              </nuxt-link>
+            </li>
+          </ul>
 
-                  <li>
-                     <nuxt-link :to="localePath('/media/video')" class="media__menu__link">{{ $t('video') }}</nuxt-link>
-                  </li>
-               </ul>
+          <photoGalleryListVue :photo-gallery="photoGallery" />
+        </div>
+      </section>
+    </div>
 
-
-               <photoGalleryListVue :photoGallery="photoGallery"></photoGalleryListVue>
-
-            </div>
-         </section>
-      </div>
-
-      <!-- media end -->
-   </section>
+    <!-- media end -->
+  </section>
 </template>
 
-<style scoped>
-.memoriy{
-   background-image: url(@/assets/foto/memoriy_fon.png);
-}
-</style>
-
 <script>
-import photoGalleryListVue from '~/components/media/photoGalleryList.vue';
-import fotoGalleryApi from '~/data/fotoGalleryApi';
+import photoGalleryListVue from '~/components/media/photoGalleryList.vue'
+import fotoGalleryApi from '~/data/fotoGalleryApi'
+import MemoriyItem from '~/components/memoriy/MemoriyItem.vue'
 export default {
-   data(){
-      return{
-         photoGallery:fotoGalleryApi,
-      }
-   },
 
-   components:{
-      photoGalleryListVue,
-   }
+  components: {
+    photoGalleryListVue,
+    MemoriyItem
+  },
+
+  data () {
+    return {
+      photoGallery: fotoGalleryApi
+    }
+  }
 }
 </script>

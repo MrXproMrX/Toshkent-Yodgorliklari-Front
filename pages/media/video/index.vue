@@ -1,65 +1,53 @@
 <template>
-   <section>
-      <!-- Memoriy start -->
+  <section>
+    <!-- Memoriy start -->
 
-      <div class="memoriy">
-         <section class="container">
-            <div class="memoriy__cart">
-               <h2 class="memoriy__title__h2">{{ $t('media') }}</h2>
-            </div>
-         </section>
-      </div>
+    <MemoriyItem :title="$t('media')"></MemoriyItem>
 
-      <!-- Memoriy end -->
+    <!-- Memoriy end -->
 
+    <!-- media start -->
 
+    <div class="media">
+      <section class="container">
+        <div class="media__cart">
+          <ul class="media__menu">
+            <li>
+              <nuxt-link :to="localePath('/media/photo')" class="media__menu__link">
+                {{ $t('foto') }}
+              </nuxt-link>
+            </li>
 
-      <!-- media start -->
+            <li class="active">
+              <nuxt-link :to="localePath('/media/video')" class="media__menu__link">
+                {{ $t('video') }}
+              </nuxt-link>
+            </li>
+          </ul>
 
-      <div class="media">
-         <section class="container">
-            <div class="media__cart">
-               <ul class="media__menu">
-                  <li>
-                     <nuxt-link :to="localePath('/media/photo')" class="media__menu__link">{{ $t('foto') }}</nuxt-link>
-                  </li>
+          <videoGalleryListVue :video-list="videoList" />
+        </div>
+      </section>
+    </div>
 
-                  <li class="active">
-                     <nuxt-link :to="localePath('/media/video')" class="media__menu__link">{{ $t('video') }}</nuxt-link>
-                  </li>
-               </ul>
-
-               <videoGalleryListVue :videoList="videoList"></videoGalleryListVue>
-
-            </div>
-         </section>
-      </div>
-
-      <!-- media end -->
-
-
-   </section>
+    <!-- media end -->
+  </section>
 </template>
 
-<style scoped>
-.memoriy{
-   background-image: url(@/assets/foto/memoriy_fon.png);
-}
-</style>
-
 <script>
-import videoGalleryListVue from '~/components/media/videoGalleryList.vue';
-import videoGalleryListApi from '~/data/videoGalleryListApi';
-
+import videoGalleryListVue from '~/components/media/videoGalleryList.vue'
+import videoGalleryListApi from '~/data/videoGalleryListApi'
+import MemoriyItem from '~/components/memoriy/MemoriyItem.vue'
 export default {
-   data(){
-      return{
-         videoList:videoGalleryListApi,
-      }
-   },
 
-   components:{
-      videoGalleryListVue
-   }
+  components: {
+    videoGalleryListVue,
+    MemoriyItem
+  },
+  data () {
+    return {
+      videoList: videoGalleryListApi
+    }
+  }
 }
 </script>

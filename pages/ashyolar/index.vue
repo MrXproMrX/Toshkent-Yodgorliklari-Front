@@ -1,49 +1,39 @@
 <template>
-   <section>
-      <!-- Memoriy start -->
+  <section>
+    <!-- Memoriy start -->
 
-      <div class="memoriy">
-         <section class="container">
-            <div class="memoriy__cart">
-               <h2 class="memoriy__title__h2">{{ $t('items') }}</h2>
-            </div>
-         </section>
-      </div>
+    <MemoriyItem :title="$t('items')"></MemoriyItem>
 
-      <!-- Memoriy end -->
+    <!-- Memoriy end -->
 
-      <!-- ashyolar start -->
+    <!-- ashyolar start -->
 
-      <div class="ashyolar_in">
-         <section class="container">
-            <div class="ashyolar_in__cart">
-               <ashyolarListVue :ashyolarList="ashyolarList"></ashyolarListVue>
-            </div>
-         </section>
-      </div>
+    <div class="ashyolar_in">
+      <section class="container">
+        <div class="ashyolar_in__cart">
+          <ashyolarListVue :ashyolar-list="ashyolarList" />
+        </div>
+      </section>
+    </div>
 
-      <!-- ashyolar end -->
-   </section>
+    <!-- ashyolar end -->
+  </section>
 </template>
 
-<style scoped>
-.memoriy{
-   background-image: url(@/assets/foto/memoriy_fon.png);
-}
-</style>
-
 <script>
-import ashyolarListVue from '~/components/ashyolar/ashyolarList.vue';
-import ashyolarApi from '~/data/ashyolarApi';
+import ashyolarListVue from '~/components/ashyolar/ashyolarList.vue'
+import ashyolarApi from '~/data/ashyolarApi'
+import MemoriyItem from '~/components/memoriy/MemoriyItem.vue'
 export default {
-   data(){
-      return{
-         ashyolarList:ashyolarApi
-      }
-   },
 
-   components:{
-      ashyolarListVue
-   }
+  components: {
+    ashyolarListVue,
+    MemoriyItem
+  },
+  data () {
+    return {
+      ashyolarList: ashyolarApi
+    }
+  }
 }
 </script>

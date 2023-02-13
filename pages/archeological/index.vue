@@ -1,49 +1,38 @@
 <template>
-   <section>
-      <!-- Memoriy start -->
+  <section>
+    <!-- Memoriy start -->
 
-      <div class="memoriy">
-         <section class="container">
-            <div class="memoriy__cart">
-               <h2 class="memoriy__title__h2">{{ $t('archeological') }}</h2>
-            </div>
-         </section>
-      </div>
+    <MemoriyItem :title="$t('archeological')"></MemoriyItem>
 
-      <!-- Memoriy end -->
+    <!-- Memoriy end -->
 
+    <!-- Arxiologik start -->
 
-      <!-- Arxiologik start -->
+    <div class="ashyolar_in">
+      <section class="container">
+        <div class="ashyolar_in__cart">
+          <arxiologikListVue :arxiologik-list="arxiologikList" />
+        </div>
+      </section>
+    </div>
 
-      <div class="ashyolar_in">
-         <section class="container">
-            <div class="ashyolar_in__cart">
-               <arxiologikListVue :arxiologikList="arxiologikList"></arxiologikListVue>
-            </div>
-         </section>
-      </div>
-
-      <!-- Arxiologik end -->
-   </section>
+    <!-- Arxiologik end -->
+  </section>
 </template>
 
-<style scoped>
-.memoriy{
-   background-image: url(@/assets/foto/memoriy_fon.png);
-}
-</style>
-
 <script>
-import arxiologikListVue from '~/components/arxiologik/arxiologikList.vue';
-import arxiologikApi from '~/data/arxiologikApi';
+import arxiologikListVue from '~/components/arxiologik/arxiologikList.vue'
+import arxiologikApi from '~/data/arxiologikApi'
+import MemoriyItem from '~/components/memoriy/MemoriyItem.vue'
 export default {
-   data(){
-      return{
-         arxiologikList:arxiologikApi
-      }
-   },
-   components:{
-      arxiologikListVue
-   }
+  components: {
+    arxiologikListVue,
+    MemoriyItem
+  },
+  data () {
+    return {
+      arxiologikList: arxiologikApi
+    }
+  }
 }
 </script>

@@ -1,66 +1,53 @@
 <template>
-   <section>
-      <!-- Memoriy start -->
+  <section>
+    <!-- Memoriy start -->
 
-      <div class="memoriy">
-         <section class="container">
-            <div class="memoriy__cart">
-               <h2 class="memoriy__title__h2">{{ $t('news') }}</h2>
-            </div>
-         </section>
-      </div>
+    <MemoriyItem :title="$t('news')"></MemoriyItem>
 
-      <!-- Memoriy end -->
+    <!-- Memoriy end -->
 
-      <!-- news start -->
+    <!-- news start -->
 
-      <div class="news">
-         <section class="container">
-            <div class="news__cart">
+    <div class="news">
+      <section class="container">
+        <div class="news__cart">
+          <NewsList :news-item="newsItem" />
+          <paginationVue v-model="page" :count="countProducts" :per-page="productsPerPage" />
+        </div>
+      </section>
+    </div>
 
-               <newsListVue :newsItem="newsItem"></newsListVue>
-               <paginationVue v-model="page" :count="countProducts" :per-page="productsPerPage"></paginationVue>
-            </div>
-         </section>
-      </div>
-
-      <!-- news end -->
-
-
-   </section>
+    <!-- news end -->
+  </section>
 </template>
 
-<style scoped>
-.memoriy{
-   background-image: url(@/assets/foto/memoriy_fon.png);
-}
-</style>
-
 <script>
-import newsListVue from '~/components/news/newsList.vue';
-import yangiliklarApi from '~/data/yangiliklarApi';
+import NewsList from '~/components/news/newsList.vue'
+import yangiliklarApi from '~/data/yangiliklarApi'
 import paginationVue from '~/components/pagination/pagination.vue'
+import MemoriyItem from '~/components/memoriy/MemoriyItem.vue'
 export default {
-   data(){
-      return{
-         page:1,
-         productsPerPage:12,
-      }
-   },
 
-   components:{
-      newsListVue,
-      paginationVue
-   },
+  components: {
+    NewsList,
+    paginationVue,
+    MemoriyItem
+  },
+  data () {
+    return {
+      page: 1,
+      productsPerPage: 12
+    }
+  },
 
-   computed:{
-      newsItem(){
-         const offset = (this.page - 1) * this.productsPerPage;
-         return yangiliklarApi.slice(offset, offset + this.productsPerPage);
-      },
-      countProducts(){
-         return yangiliklarApi.length;
-      }
-   }
+  computed: {
+    newsItem () {
+      const offset = (this.page - 1) * this.productsPerPage
+      return yangiliklarApi.slice(offset, offset + this.productsPerPage)
+    },
+    countProducts () {
+      return yangiliklarApi.length
+    }
+  }
 }
 </script>

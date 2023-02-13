@@ -13,14 +13,14 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel:"stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css", integrity:"sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==",crossorigin:"anonymous",referrerpolicy:"no-referrer"}
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css', integrity: 'sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==', crossorigin: 'anonymous', referrerpolicy: 'no-referrer' }
     ]
   },
 
   loading: {
-   continuous: true,
-   color: '#3A8DDA',
-   height: '5px'
+    continuous: true,
+    color: '#3A8DDA',
+    height: '5px'
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -33,7 +33,7 @@ export default {
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: false,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -45,35 +45,28 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/i18n',
-    '@nuxtjs/strapi'
+    '@nuxtjs/i18n'
   ],
 
-   i18n: {
-      locales: [
-         {
-            code: 'uz',
-            file: 'uz.json'
-         },
-         {
-           code: 'ru',
-           file: 'ru.json'
-         },
-         {
-            code: 'en',
-            file: 'en.json'
-         },
-      ],
-      lazy: true,
-      langDir: '~/locales/',
-      defaultLocale: 'uz'
-   },
-
-   strapi: {
-      entities: [
-         { name: 'home', type: 'single' }
-      ]
-   },
+  i18n: {
+    locales: [
+      {
+        code: 'uz',
+        file: 'uz.json'
+      },
+      {
+        code: 'ru',
+        file: 'ru.json'
+      },
+      {
+        code: 'en',
+        file: 'en.json'
+      }
+    ],
+    lazy: true,
+    langDir: '~/locales/',
+    defaultLocale: 'uz'
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
