@@ -19,6 +19,12 @@
 
 <script>
 export default {
-  props: ['ashyolarList']
+  props:{
+    ashyolarList:{
+      type:Array,
+      required: true,
+      default: () => []
+    }
+  }
 }
 </script>

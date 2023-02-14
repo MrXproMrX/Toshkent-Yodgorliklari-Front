@@ -48,7 +48,13 @@
 
 <script>
 export default {
-  props: ['listMaps'],
+  props: {
+    listMaps:{
+      type:Array,
+      required:true,
+      default:() => []
+    }
+  },
   data () {
     return {
       mapId: this.listMaps[0].id

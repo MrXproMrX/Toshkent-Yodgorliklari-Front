@@ -26,6 +26,12 @@
 
 <script>
 export default {
-  props: ['electronicList']
+  props:{
+    electronicList:{
+      type:Array,
+      required:true,
+      default:() => []
+    }
+  }
 }
 </script>

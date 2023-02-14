@@ -24,6 +24,12 @@
 
 <script>
 export default {
-  props: ['newsList']
+  props: {
+    newsList:{
+      type:Array,
+      required:true,
+      default:() => []
+    }
+  }
 }
 </script>

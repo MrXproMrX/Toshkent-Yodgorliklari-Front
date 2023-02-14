@@ -27,6 +27,12 @@
 
 <script>
 export default {
-  props: ['olimlarList']
+  props: {
+    olimlarList:{
+      type:Array,
+      required:true,
+      default:() => []
+    }
+  }
 }
 </script>

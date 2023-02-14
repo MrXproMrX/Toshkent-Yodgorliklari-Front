@@ -23,7 +23,14 @@ export default {
   components: {
     VueSlickArxiologik
   },
-  props: ['ashyolarList'],
+  props: {
+    ashyolarList:{
+      type:Array,
+      required:true,
+      default:() => []
+    }
+  },
+
   data () {
     return {
       slikAshyolar: {

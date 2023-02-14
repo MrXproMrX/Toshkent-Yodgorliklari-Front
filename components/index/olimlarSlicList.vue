@@ -28,7 +28,15 @@ export default {
   components: {
     VueSlickArxiologik
   },
-  props: ['olimlarList'],
+
+  props: {
+    olimlarList:{
+      type:Array,
+      required:true,
+      default:() => []
+    }
+  },
+
   data () {
     return {
       slikOlimlar: {

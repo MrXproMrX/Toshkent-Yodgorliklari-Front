@@ -28,6 +28,12 @@
 
 <script>
 export default {
-  props: ['videoList']
+  props:{
+    videoList:{
+      type:Array,
+      required:true,
+      default:() => []
+    }
+  }
 }
 </script>

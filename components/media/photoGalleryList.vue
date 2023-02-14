@@ -18,6 +18,12 @@
 
 <script>
 export default {
-  props: ['photoGallery']
+  props: {
+    photoGallery:{
+      type:Array,
+      required:true,
+      default:() => []
+    }
+  }
 }
 </script>

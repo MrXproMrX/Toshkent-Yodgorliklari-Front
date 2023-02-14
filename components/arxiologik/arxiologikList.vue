@@ -16,6 +16,12 @@
 
 <script>
 export default {
-  props: ['arxiologikList']
+  props:{
+    arxiologikList:{
+      type:Array,
+      required: true,
+      default: () => []
+    }
+  }
 }
 </script>

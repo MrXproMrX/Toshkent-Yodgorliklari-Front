@@ -13,6 +13,12 @@
 
 <script>
 export default {
-  props: ['fotoList']
+  props:{
+    fotoList:{
+      type:Array,
+      required:true,
+      default:() => []
+    }
+  }
 }
 </script>
