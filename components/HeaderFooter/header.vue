@@ -9,7 +9,7 @@
         <div class="header__ru">
           <ul class="header__locales__cart">
             <li @click="headerLocales = !headerLocales">
-              {{ localeTitle.toUpperCase() }} <span><i class="fas fa-chevron-down" /></span>
+              {{ localeTitle.toUpperCase() }} <span><fa :icon="['fas', 'chevron-down']" /></span>
 
               <ul :class="{header__locales__menu : headerLocales}">
                 <li v-for="(locale,index) in availableLocales" :key="index + locale.code">
@@ -82,7 +82,7 @@
               </ul>
 
               <button class="header__burger__none" @click="burger = !burger">
-                <i class="fas fa-bars" />
+                <fa :icon="['fas', 'bars']" />
               </button>
             </div>
           </div>

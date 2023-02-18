@@ -18,7 +18,7 @@
               </div>
               <a href="#!" class="slider__link">
                 {{ $t('more') }}
-                <span><i class="fas fa-chevron-right"></i></span>
+                <span><fa :icon="['fas', 'angle-right']" /></span>
               </a>
             </div>
           </section>
@@ -38,7 +38,7 @@
               </div>
               <a href="#!" class="slider__link">
                 {{ $t('more') }}
-                <span><i class="fas fa-chevron-right"></i></span>
+                <span><fa :icon="['fas', 'angle-right']" /></span>
               </a>
             </div>
           </section>
@@ -75,7 +75,7 @@
             </h2>
             <nuxt-link :to="localePath('/archeological')" class="arxiologik__all__link">
               {{ $t('everything') }}
-              <span><i class="fas fa-chevron-right"></i></span>
+              <span><fa :icon="['fas', 'angle-right']" /></span>
             </nuxt-link>
           </div>
 
@@ -97,7 +97,7 @@
             </h2>
             <nuxt-link :to="localePath('/ashyolar')" class="arxiologik__all__link">
               {{ $t('everything') }}
-              <span><i class="fas fa-chevron-right"></i></span>
+              <span><fa :icon="['fas', 'angle-right']" /></span>
             </nuxt-link>
           </div>
 
@@ -151,7 +151,7 @@
             </h2>
             <nuxt-link :to="localePath('/scientists')" class="arxiologik__all__link">
               {{ $t('everything') }}
-              <span><i class="fas fa-chevron-right"></i></span>
+              <span><fa :icon="['fas', 'angle-right']" /></span>
             </nuxt-link>
           </div>
 
@@ -173,7 +173,7 @@
             </h2>
             <nuxt-link :to="localePath('/news')" class="arxiologik__all__link">
               {{ $t('everything') }}
-              <span><i class="fas fa-chevron-right"></i></span>
+              <span><fa :icon="['fas', 'angle-right']" /></span>
             </nuxt-link>
           </div>
 

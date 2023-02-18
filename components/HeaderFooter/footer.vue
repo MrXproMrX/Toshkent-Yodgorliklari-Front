@@ -21,19 +21,19 @@
                 <ul class="footer__icons__menu">
                   <li>
                     <a href="#!" class="footer__icons__link">
-                      <i class="fab fa-instagram" />
+                      <fa :icon="['fab', 'instagram']" />
                     </a>
                   </li>
 
                   <li>
                     <a href="#!" class="footer__icons__link">
-                      <i class="fab fa-facebook-f" />
+                      <fa :icon="['fab', 'facebook-f']" />
                     </a>
                   </li>
 
                   <li>
                     <a href="#!" class="footer__icons__link">
-                      <i class="fab fa-telegram-plane" />
+                      <fa :icon="['fab', 'telegram']" />
                     </a>
                   </li>
                 </ul>

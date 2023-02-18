@@ -194,7 +194,6 @@ export default {
 <style scoped lang="scss">
 
 // 404 page
-
 .bl_wrapper {
   margin-bottom: 30px;
 }

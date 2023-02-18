@@ -16,7 +16,7 @@
     }
 
     &__item__img{
-        @include fiximg(100%,auto,true);        
+        @include fiximg(100%,auto,true);
         img{
             max-height: 140px;
             object-position: center top;
@@ -49,7 +49,7 @@
         @include fontAll(20px,700,$fff);
         line-height: 100%;
         margin-top: 45px;
-        i{
+        svg{
             @extend%transition;
         }
     }
@@ -71,7 +71,7 @@
             font-style: normal;
             display: inline-block;
         }
-    
+
         a{
             font-size: 110%;
             color:$title;
@@ -99,7 +99,7 @@
             }
 
             .olimlar_in__open{
-                i{
+                svg{
                     transform: rotate(180deg);
                     -webkit-transform: rotate(180deg);
                     -moz-transform: rotate(180deg);

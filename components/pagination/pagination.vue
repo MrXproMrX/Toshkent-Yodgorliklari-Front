@@ -3,7 +3,7 @@
     <ul class="news__pagination">
       <li v-if="page>1" class="pagination__item">
         <a class="news__pagination__next" aria-label="Предыдущая страница" @click.prevent="paginate(page -1)">
-          <i class="fas fa-angle-double-left" />
+          <fa :icon="['fas', 'angle-left']" />
         </a>
       </li>
 
@@ -15,7 +15,7 @@
 
       <li v-if="page<pages" class="pagination__item">
         <a class="news__pagination__next" href="#" aria-label="Следующая страница" @click.prevent="paginate(page+1)">
-          <i class="fas fa-angle-double-right" />
+          <fa :icon="['fas', 'angle-right']" />
         </a>
       </li>
     </ul>

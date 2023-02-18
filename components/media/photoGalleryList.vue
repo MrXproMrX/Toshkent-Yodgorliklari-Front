@@ -5,7 +5,7 @@
         <nuxt-link :to="localePath(`/media/photo/` + items.id)">
           <img :src="items.imgs" :alt="items.title">
           <span>
-            <i class="fas fa-search" />
+            <fa :icon="['fas', 'magnifying-glass']" />
           </span>
         </nuxt-link>
       </div>

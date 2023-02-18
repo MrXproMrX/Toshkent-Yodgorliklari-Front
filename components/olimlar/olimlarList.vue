@@ -18,7 +18,7 @@
         </div>
 
         <button class="olimlar_in__open" @click="item.open = !item.open">
-          <i class="fas fa-chevron-down" />
+          <fa :icon="['fas', 'chevron-down']" />
         </button>
       </section>
     </div>

@@ -40,7 +40,7 @@
               <input type="email" class="contacts__input" :placeholder="$t('email')">
               <textarea class="contacts__textarea" :placeholder="$t('message')" />
               <button type="submit" class="contacts__button">
-                {{ $t('send') }} <i class="fas fa-chevron-right" />
+                {{ $t('send') }} <fa :icon="['fas', 'angle-right']" />
               </button>
             </form>
           </div>
