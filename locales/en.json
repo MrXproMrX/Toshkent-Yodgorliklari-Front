@@ -10,7 +10,7 @@
    "mapTashkent":"Map of Tashkent",
    "foto":"Photo",
    "video":"Video",
-   "everything":"Everything",
+   "everything":"All",
    "address":"Address",
    "phone":"Telephone",
    "email":"Email",
@@ -20,6 +20,6 @@
    "footer_text1":"All rights reserved",
    "webBeveloped":"Web developed by",
    "more":"More",
-   "goHome":"Go to Home",
+   "goHome":"Go Home",
    "pageNotFound":"Page not found"
 }
