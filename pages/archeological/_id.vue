@@ -62,19 +62,21 @@
         <div class="memoriy_video__cart">
           <div class="memoriy_video__list__item" @click="videoPlay = true">
             <section class="memoriy_video__img__item" :class="{active__video:videoPlay}">
-              <img class="videoItem" :src="arxiologBlog.imgs" :alt="arxiologBlog.title">
-              <div v-html="arxiologBlog.link" />
-              <!-- play start -->
-
-              <div class="button__min is-play">
-                <div class="button-outer-circle has-scale-animation" />
-                <div class="button-outer-circle has-scale-animation has-delay-short" />
-                <div class="button-icon is-play">
-                  <img class="about_contint_in__video__img__play" alt="All" src="@/assets/foto/pley.svg">
+              <template v-if="videoPlay">
+                <div v-html="arxiologBlog.link" />
+              </template>
+              <template v-else-if="videoPlay == false">
+                <img class="videoItem" :src="arxiologBlog.imgs" :alt="arxiologBlog.title">
+                <!-- play start -->
+                <div class="button__min is-play">
+                  <div class="button-outer-circle has-scale-animation" />
+                  <div class="button-outer-circle has-scale-animation has-delay-short" />
+                  <div class="button-icon is-play">
+                    <img class="about_contint_in__video__img__play" alt="All" src="@/assets/foto/pley.svg">
+                  </div>
                 </div>
-              </div>
-
-              <!-- play end -->
+                <!-- play end -->
+              </template>
             </section>
           </div>
         </div>

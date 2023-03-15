@@ -27,19 +27,21 @@
 
           <div class="media__video__list__item" @click="videoPlay = true">
             <section class="media__video__img__item" :class="{active__video:videoPlay}">
-              <img class="videoItem" :src="videoGalleryBlog.imgs" :alt="videoGalleryBlog.title">
-              <div v-html="videoGalleryBlog.link" />
-              <!-- play start -->
-
-              <div class="button__min is-play">
-                <div class="button-outer-circle has-scale-animation" />
-                <div class="button-outer-circle has-scale-animation has-delay-short" />
-                <div class="button-icon is-play">
-                  <img class="about_contint_in__video__img__play" alt="All" src="@/assets/foto/pley.svg">
+              <template v-if="videoPlay">
+                <div v-html="videoGalleryBlog.link" />
+              </template>
+              <template v-else-if="videoPlay==false">
+                <img class="videoItem" :src="videoGalleryBlog.imgs" :alt="videoGalleryBlog.title">
+                <!-- play start -->
+                <div class="button__min is-play">
+                  <div class="button-outer-circle has-scale-animation" />
+                  <div class="button-outer-circle has-scale-animation has-delay-short" />
+                  <div class="button-icon is-play">
+                    <img class="about_contint_in__video__img__play" alt="All" src="@/assets/foto/pley.svg">
+                  </div>
                 </div>
-              </div>
-
-              <!-- play end -->
+                <!-- play end -->
+              </template>
             </section>
           </div>
 

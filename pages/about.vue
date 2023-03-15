@@ -25,9 +25,10 @@
 
           <div class="memoriy_video__list__item" @click="videoPlay = true">
             <section class="memoriy_video__img__item" :class="{active__video:videoPlay}">
-              <img class="videoItem" src="@/assets/foto/about.png" alt="video">
-              <div>
-                <iframe
+
+              <template v-if="videoPlay">
+                <div>
+                  <iframe
                   width="640"
                   height="360"
                   src="https://www.youtube.com/embed/b1-JHKQ5GVU?list=RDb1-JHKQ5GVU"
@@ -35,19 +36,23 @@
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen
-                />
-              </div>
-              <!-- play start -->
-
-              <div class="button__min is-play">
-                <div class="button-outer-circle has-scale-animation" />
-                <div class="button-outer-circle has-scale-animation has-delay-short" />
-                <div class="button-icon is-play">
-                  <img class="about_contint_in__video__img__play" alt="All" src="@/assets/foto/pley.svg">
+                  />
                 </div>
-              </div>
+              </template>
 
-              <!-- play end -->
+              <template v-else-if="videoPlay == false">
+                <img class="videoItem" src="@/assets/foto/about.png" alt="video">
+                <!-- play start -->
+
+                <div class="button__min is-play">
+                  <div class="button-outer-circle has-scale-animation" />
+                  <div class="button-outer-circle has-scale-animation has-delay-short" />
+                  <div class="button-icon is-play">
+                    <img class="about_contint_in__video__img__play" alt="All" src="@/assets/foto/pley.svg">
+                  </div>
+                </div>
+                <!-- play end -->
+              </template>
             </section>
           </div>
         </div>

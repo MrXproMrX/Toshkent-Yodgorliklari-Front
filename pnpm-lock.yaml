@@ -3,7 +3,6 @@ lockfileVersion: 5.4
 specifiers:
   '@babel/eslint-parser': ^7.16.3
   '@commitlint/cli': ^17.4.3
-  '@fortawesome/fontawesome-svg-core': ^6.3.0
   '@fortawesome/free-brands-svg-icons': ^6.3.0
   '@fortawesome/free-solid-svg-icons': ^6.3.0
   '@fortawesome/vue-fontawesome': ^2.0.10
@@ -31,7 +30,6 @@ specifiers:
 
 dependencies:
   '@commitlint/cli': 17.4.3
-  '@fortawesome/fontawesome-svg-core': 6.3.0
   '@fortawesome/vue-fontawesome': 2.0.10_kj5c2m475dy3heswcupuodwlh4
   '@nuxtjs/axios': 5.13.6
   '@nuxtjs/i18n': 7.3.1_vue@2.7.14
